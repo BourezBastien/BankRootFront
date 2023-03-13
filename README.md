@@ -1,4 +1,4 @@
-![BankRoot banner](https://i.imgur.com/iiyRxnd.png)
+![BankRoot banner](https://i.imgur.com/4bKTfAd.pngs)
 
 # Frontend Angular BankRoot
 
