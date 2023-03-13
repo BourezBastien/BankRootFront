@@ -1,27 +1,35 @@
-# BankRootFront
+![BankRoot banner](https://i.imgur.com/iiyRxnd.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
+# Frontend Angular BankRoot
 
-## Development server
+Suite à la conception de l’API de gestion de comptes bancaires pour l’enseigne BankRoot, votre équipe est maintenant
+chargée de développer l’interface frontend en Angular qui va consommer cette API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Le catalogue de l'API est disponible à cetta adresse : http://152.228.163.78:3000/api
 
-## Code scaffolding
+## Notions de base:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Composants : La page est divisée en composants réutilisables.
+2. Modules : Les fonctionnalités sont organisées en modules logiques.
+3. Services : Les données sont récupérées via des services.
+4. Templates : Les vues sont créées à l’aide de templates.
+5. Directives : Les comportements personnalisés sont ajoutés via des directives.
+6. Routage : La navigation entre les pages est gérée via le routage.
+7. Observables : Les flux de données sont gérés via des observables.
+8. Injection de dépendances : Les services sont injectés dans les composants via l’injection de dépendances.
+9. Formulaires : Les données utilisateur sont gérées via des formulaires.
 
-## Build
+## Compétences visées:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Maquetter une application:
+  - Niveau 3
+- Développer une interface utilisateur de type desktop:
+  - Niveau 2
+- Développer la partie front-end d’une interface utilisateur web:
+  - Niveau 3
 
-## Running unit tests
+## Sources:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- [Doc Officiel](https://angular.io/docs).
+- [MDN - Getting started with Angular](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started).
+- [freeCodeCamp - Angular for Beginners Course | 16h de vidéo](https://www.youtube.com/watch?v=3qBXWUpoPHo&ab_channel=freeCodeCamp.org).
