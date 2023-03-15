@@ -1,10 +1,21 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {RESTAPIService} from '../../API/restapiservice.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-client-list',
   templateUrl: './client-list.component.html',
-  styleUrls: ['./client-list.component.sass']
+  styleUrls: ['./client-list.component.scss']
 })
-export class ClientListComponent {
+export class ClientListComponent implements OnInit {
+  constructor(private service: RESTAPIService, private router: Router) {
+  }
 
+  ngOnInit(): void {
+  }
+
+  async getUsers() {
+    const users = await this.service.getUsers();
+    return users;
+  }
 }

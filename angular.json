@@ -30,8 +30,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles/main.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/style-paths"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
