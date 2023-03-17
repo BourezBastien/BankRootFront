@@ -1,0 +1,76 @@
+@import "../../../styles/components/button";
+@import "../../../styles/abstracts/mixins";
+
+header {
+  width: 100vw;
+  height: auto;
+  display: flex;
+
+  nav {
+    display: flex;
+    width: 100vw;
+    height: 10vh;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: $primary;
+    }
+
+
+    ul {
+      li {
+        a {
+          padding-left: 20px;
+          font-size: 1.1rem;
+          color: $black;
+        }
+      }
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $primary;
+        font-size: 1rem;
+        text-align: center;
+        white-space: nowrap;
+
+        &:nth-child(2) {
+          color: white;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+
+@include for-phone-only {
+  nav {
+    .nav-right {
+      a {
+        display: none;
+      }
+    }
+
+    ul {
+      li {
+        a {
+          display: none;
+        }
+      }
+    }
+
+    .logo {
+      font-size: 1.5em;
+      margin: 0 auto;
+    }
+  }
+}
+

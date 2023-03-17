@@ -5,8 +5,6 @@ import {HttpClient, HttpHeaders} from '@angular/common/http'
   providedIn: 'root'
 })
 export class RESTAPIService {
-  private BaseUrl = "http://152.228.163.78:3000/";
-
   constructor(private http: HttpClient) {
   }
 
@@ -17,6 +15,6 @@ export class RESTAPIService {
   };
 
   getUsers() {
-    return this.http.get(this.BaseUrl + "/user", this.httpOptions);
+    return this.http.get("user", this.httpOptions);
   }
 }
