@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RESTAPIService} from '../../API/restapiservice.service';
+import {RESTAPIService} from '../../API/service.service';
 import {Router} from "@angular/router";
 
 @Component({
@@ -11,8 +11,7 @@ export class ClientListComponent implements OnInit {
   constructor(private service: RESTAPIService, private router: Router) {
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   async getUsers() {
     const users = await this.service.getUsers();
