@@ -70,10 +70,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "BankRootFront:build:production"
+              "browserTarget": "BankRootFront:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "BankRootFront:build:development"
+              "browserTarget": "BankRootFront:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +83,8 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "BankRootFront:build"
+            "browserTarget": "BankRootFront:build",
+            "proxyConfig": "src/proxy.conf.json"
           }
         },
         "test": {
