@@ -10,6 +10,8 @@ import {LoginComponent} from './pages/login/login.component';
 import {RegistrationComponent} from './pages/registration/registration.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from "./components/header/header.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import {HeaderComponent} from "./components/header/header.component";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
