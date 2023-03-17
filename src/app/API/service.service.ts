@@ -15,6 +15,10 @@ export class RESTAPIService {
   };
 
   getUsers() {
-    return this.http.get("user", this.httpOptions);
+    return this.http.get("/user", this.httpOptions);
+  }
+
+  createUser(user: any) {
+    return this.http.post("/auth/register", user, this.httpOptions)
   }
 }
