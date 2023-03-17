@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RESTAPIService} from '../../API/restapiservice.service';
+import {RESTAPIService} from '../../API/service.service';
 
 @Component({
   selector: 'app-homepage',
