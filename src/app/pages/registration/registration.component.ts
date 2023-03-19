@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
 import {FormGroup, FormControl, Validators}
   from '@angular/forms';
-import {RESTAPIService} from "../../API/service.service";
+import {ApiService} from "../../_services/api.service";
 import {User} from '../../interfaces/User';
-import {ToastNotifications} from "../../toast-notification/notification";
+import {NotificationService} from "../../_services/notification.service";
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +12,7 @@ import {ToastNotifications} from "../../toast-notification/notification";
 })
 export class RegistrationComponent {
 
-  constructor(private service: RESTAPIService, private notificationService: ToastNotifications) {
+  constructor(private service: ApiService, private notificationService: NotificationService) {
   }
 
   form = new FormGroup({
