@@ -16,7 +16,7 @@ export class ApiService {
 
     const accessToken = tokenSession["access_token"];
 
-    console.log(accessToken);
+    return accessToken;
   }
 
   httpOptions = {
