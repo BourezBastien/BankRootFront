@@ -11,6 +11,7 @@ import {RegistrationComponent} from './pages/registration/registration.component
 import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from "./components/header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {NgToastModule} from 'ng-angular-popup';
 
 
 @NgModule({
@@ -21,14 +22,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     LoginComponent,
     RegistrationComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgToastModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

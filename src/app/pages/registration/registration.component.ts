@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {FormGroup, FormControl, Validators}
   from '@angular/forms';
 import {RESTAPIService} from "../../API/service.service";
+import {User} from '../../interfaces/User';
+import {ToastNotifications} from "../../toast-notification/notification";
 
 @Component({
   selector: 'app-registration',
@@ -10,9 +12,8 @@ import {RESTAPIService} from "../../API/service.service";
 })
 export class RegistrationComponent {
 
-  constructor(private service: RESTAPIService) {
+  constructor(private service: RESTAPIService, private notificationService: ToastNotifications) {
   }
-
 
   form = new FormGroup({
     "firstname": new FormControl("", Validators.required),
@@ -21,16 +22,25 @@ export class RegistrationComponent {
     "password": new FormControl("", Validators.required),
   });
 
-  onSubmitRegister() {
-    const user = {
-      name: this.form.value.firstname,
-      lastname: this.form.value.lastname,
-      mail: this.form.value.email,
-      password: this.form.value.password
+  async onSubmitRegister() {
+
+    const user: User = {
+      name: String(this.form.value.firstname),
+      lastname: String(this.form.value.lastname),
+      mail: String(this.form.value.email),
+      password: String(this.form.value.password)
     }
-    console.log(JSON.stringify(user));
-    this.service.createUser(JSON.stringify(user)).subscribe((response) => console.log(response))
-    /*console.log("identifiant", this.form.value);*/
+
+    this.service.createUser(user).subscribe((response) => {
+      try {
+        this.notificationService.openSuccess("Succèes", "Votre compte a bien était crée", 5000)
+        this.form.reset();
+      } catch (e) {
+        this.notificationService.openError("Erreur", "Une erreur est survenus lors de la création de votre compte", 5000)
+        console.log(e);
+
+      }
+    });
   }
 
 }
