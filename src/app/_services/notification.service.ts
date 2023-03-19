@@ -1,11 +1,10 @@
-import {NgToastService} from "ng-angular-popup";
 import {Injectable} from '@angular/core';
+import {NgToastService} from "ng-angular-popup";
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class ToastNotifications {
+export class NotificationService {
 
 
   constructor(private notificationService: NgToastService) {
@@ -25,7 +24,7 @@ export class ToastNotifications {
   openSuccess(details: string, summary: string, duration: number) {
     this.notificationService.success({
       detail: details, summary: summary, duration: duration, sticky: true,
-      position: 'br'
+      position: 'tr'
     })
   }
 

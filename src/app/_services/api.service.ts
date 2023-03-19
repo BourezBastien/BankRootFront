@@ -5,7 +5,7 @@ import {User} from '../interfaces/User';
 @Injectable({
   providedIn: 'root'
 })
-export class RESTAPIService {
+export class ApiService {
 
   constructor(private http: HttpClient) {
   }
