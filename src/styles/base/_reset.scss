@@ -2,9 +2,14 @@
 
 @import "typography";
 
+
 html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  padding: 0
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 * {
@@ -12,13 +17,12 @@ html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, tex
   list-style: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
+h1, h2, h3, h4, h5, h6, th {
+  font-weight: bold;
   font-family: $title
 }
 
-p, a, span {
+p, a, span, td {
   font-family: $text;
 }
 
