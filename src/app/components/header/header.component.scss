@@ -7,7 +7,12 @@ header {
   display: flex;
 
   .is-active {
-    border-bottom: 2px solid $primary;
+    background-color: $primary;
+    color: $white !important;
+    padding: 6px 15px;
+    font-size: 1.1em;
+    border-radius: 4px;
+
   }
 
 
@@ -30,7 +35,7 @@ header {
     ul {
       li {
         a {
-          padding-left: 20px;
+          margin-left: 30px;
           font-size: 1.1rem;
           color: $black;
         }
