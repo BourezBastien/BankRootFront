@@ -12,6 +12,7 @@ import {FooterComponent} from './components/footer/footer.component';
 import {HeaderComponent} from "./components/header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgToastModule} from 'ng-angular-popup';
+import {httpInterceptorProviders} from "./_helpers/http.interceptor";
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import {NgToastModule} from 'ng-angular-popup';
     ReactiveFormsModule,
     NgToastModule,
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule {
