@@ -13,6 +13,8 @@ import {HeaderComponent} from "./components/header/header.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {NgToastModule} from 'ng-angular-popup';
 import {httpInterceptorProviders} from "./_helpers/http.interceptor";
+import {ClientArenaComponent} from "./pages/client-arena/client-arena.component";
+import {AdminArenaComponent} from "./pages/admin-arena/admin-arena.component";
 
 
 @NgModule({
@@ -24,6 +26,8 @@ import {httpInterceptorProviders} from "./_helpers/http.interceptor";
     RegistrationComponent,
     FooterComponent,
     HeaderComponent,
+    ClientArenaComponent,
+    AdminArenaComponent
   ],
   imports: [
     BrowserModule,
