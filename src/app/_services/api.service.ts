@@ -10,9 +10,19 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
+  async getToken(token: string) {
+
+    const tokenSession = JSON.parse(token);
+
+    const accessToken = tokenSession["access_token"];
+
+    console.log(accessToken);
+  }
+
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + this.getToken(String(window.sessionStorage.getItem("Token"))),
     })
   };
 
