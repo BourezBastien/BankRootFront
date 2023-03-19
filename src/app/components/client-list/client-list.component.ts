@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {RESTAPIService} from '../../API/service.service';
+import {ApiService} from '../../_services/api.service';
 import {Router} from "@angular/router";
 
 @Component({
@@ -8,10 +8,11 @@ import {Router} from "@angular/router";
   styleUrls: ['./client-list.component.scss']
 })
 export class ClientListComponent implements OnInit {
-  constructor(private service: RESTAPIService, private router: Router) {
+  constructor(private service: ApiService, private router: Router) {
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   async getUsers() {
     const users = await this.service.getUsers();

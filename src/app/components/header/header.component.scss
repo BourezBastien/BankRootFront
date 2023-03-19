@@ -6,6 +6,11 @@ header {
   height: 10vh;
   display: flex;
 
+  .is-active {
+    border-bottom: 2px solid $primary;
+  }
+
+
   nav {
     display: flex;
     width: 100vw;
