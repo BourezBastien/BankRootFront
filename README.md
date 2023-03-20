@@ -1,6 +1,6 @@
 ![BankRoot banner](https://i.imgur.com/4bKTfAd.pngs)
 
-# Frontend Angular BankRoot
+# Frontend Angular BankRoot Agency
 
 Suite à la conception de l’API de gestion de comptes bancaires pour l’enseigne BankRoot, votre équipe est maintenant
 chargée de développer l’interface frontend en Angular qui va consommer cette API.
