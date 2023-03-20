@@ -120,7 +120,7 @@ Here is the list of tools to be used to carry out the project.
 - Other:
   - Roboto.
 
-  ## How to install
+  ## How to install <a id='install'></a>
 
   - Clone repository.
     - git clone https://github.com/BourezBastien/BankRootFront.git
