@@ -10,7 +10,6 @@ export class NotificationService {
   constructor(private notificationService: NgToastService) {
   }
 
-
   openWarning(details: string, summary: string, duration: number) {
     this.notificationService.warning({
       detail: details,
@@ -37,9 +36,7 @@ export class NotificationService {
   openInfo(details: string, summary: string, duration: number) {
     this.notificationService.info({
       detail: details, summary: summary, duration: duration,
-      position
-  :
-    'tr'
+      position: 'tr'
   })
   }
 }
