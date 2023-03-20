@@ -16,29 +16,30 @@ export class NotificationService {
       detail: details,
       summary: summary,
       duration: duration,
-      sticky: true,
       position: 'tr'
     })
   }
 
   openSuccess(details: string, summary: string, duration: number) {
     this.notificationService.success({
-      detail: details, summary: summary, duration: duration, sticky: true,
+      detail: details, summary: summary, duration: duration,
       position: 'tr'
     })
   }
 
   openError(details: string, summary: string, duration: number) {
     this.notificationService.error({
-      detail: details, summary: summary, duration: duration, sticky: true,
+      detail: details, summary: summary, duration: duration,
       position: 'tr'
     })
   }
 
   openInfo(details: string, summary: string, duration: number) {
     this.notificationService.info({
-      detail: details, summary: summary, duration: duration, sticky: true,
-      position: 'tr'
-    })
+      detail: details, summary: summary, duration: duration,
+      position
+  :
+    'tr'
+  })
   }
 }
