@@ -4,15 +4,13 @@
     <ul *ngIf="!isLoggedIn">
       <li>
         <a routerLink="" routerLinkActive="is-active">Accueil</a>
-        <a routerLink="/about" routerLinkActive="is-active">About</a>
-        <a routerLink="/contact" routerLinkActive="is-active">Contact</a>
+        <a href="https://github.com/BourezBastien/BankRootFront" target="_blank">En savoir plus</a>
       </li>
     </ul>
     <ul *ngIf="isLoggedIn">
       <li>
         <a routerLink="/admin" routerLinkActive="is-active">Admin</a>
         <a routerLink="/client" routerLinkActive="is-active">Client</a>
-        <a routerLink="/contact" routerLinkActive="is-active">Contact</a>
       </li>
     </ul>
     <div class="nav-right">

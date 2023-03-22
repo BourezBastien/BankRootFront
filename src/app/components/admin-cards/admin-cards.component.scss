@@ -1,0 +1,60 @@
+@import "../../../styles/abstracts/variables";
+
+
+.admin-cards {
+  margin: 70px auto;
+  width: 75%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .item {
+    width: 260px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    border-radius: 5px;
+    padding: 5px;
+
+    .top {
+      width: auto;
+      height: auto;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+
+
+      i {
+        font-size: 1.5em;
+        color: $white;
+      }
+    }
+
+    .bottom {
+      margin: auto auto;
+      width: auto;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      h2 {
+        font-size: 1.7em;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: $white;
+      }
+
+      p {
+        color: $primary-light;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
+
