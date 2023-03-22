@@ -34,16 +34,11 @@ export class LoginComponent implements OnInit {
     const {email, password} = this.form.value;
 
     this.authService.login(email || "", password || "").subscribe({
-      next: data => {
+      next: (data) => {
         this.storageService.saveUser(data);
         this.router.navigateByUrl('/admin');
-        this.notificationService.openSuccess("Succès", "Connexion réussite", 5000)
-
+        this.notificationService.openSuccess("Succès", "Vous êtes maintenant connecté", 5000);
       },
-      error: err => {
-        console.log(err);
-        this.notificationService.openError("Erreur", "une erreur est survenue, veuillez réessayer", 5000)
-      }
     });
   }
 

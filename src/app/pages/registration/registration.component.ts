@@ -4,6 +4,7 @@ import {FormGroup, FormControl, Validators}
 import {ApiService} from "../../_services/api.service";
 import {User} from '../../interfaces/User';
 import {NotificationService} from "../../_services/notification.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-registration',
@@ -12,7 +13,8 @@ import {NotificationService} from "../../_services/notification.service";
 })
 export class RegistrationComponent {
 
-  constructor(private service: ApiService, private notificationService: NotificationService) {
+  constructor(private service: ApiService, private notificationService: NotificationService, private router: Router) {
+
   }
 
   form = new FormGroup({
@@ -35,6 +37,8 @@ export class RegistrationComponent {
       try {
         this.notificationService.openSuccess("Succèes", "Votre compte a bien était crée", 5000)
         this.form.reset();
+        this.router.navigateByUrl('/login');
+
       } catch (e) {
         this.notificationService.openError("Erreur", "Une erreur est survenus lors de la création de votre compte", 5000)
         console.log(e);
