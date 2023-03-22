@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {ApiService} from "../../_services/api.service";
 
 @Component({
@@ -7,17 +7,10 @@ import {ApiService} from "../../_services/api.service";
   templateUrl: './admin-cards.component.html',
   styleUrls: ['./admin-cards.component.scss']
 })
-export class AdminCardsComponent implements OnInit {
+export class AdminCardsComponent {
 
-  requests!: any
 
   constructor(private apiservice: ApiService) {
   }
 
-  ngOnInit() {
-
-    this.apiservice.getRequests().subscribe((requests) => {
-      this.requests = requests
-    })
-  }
 }
