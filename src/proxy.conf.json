@@ -10,5 +10,9 @@
   "/auth/login": {
     "target": "http://152.228.163.78:3000/",
     "secure": false
+  },
+  "/account-request/all": {
+    "target": "http://152.228.163.78:3000/",
+    "secure": false
   }
 }
