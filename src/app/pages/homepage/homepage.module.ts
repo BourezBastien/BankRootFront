@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HomepageComponent } from './homepage.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HomepageComponent} from './homepage.component';
+import {CommonComposentModule} from "../../components/common.module";
 
 
 @NgModule({
@@ -9,7 +9,9 @@ import { HomepageComponent } from './homepage.component';
     HomepageComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CommonComposentModule,
   ]
 })
-export class HomepageModule { }
+export class HomepageModule {
+}

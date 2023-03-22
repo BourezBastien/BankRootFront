@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { ClientArenaComponent } from './client-arena.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {ClientArenaComponent} from './client-arena.component';
+import {CommonComposentModule} from "../../components/common.module";
 
 
 @NgModule({
@@ -9,7 +9,9 @@ import { ClientArenaComponent } from './client-arena.component';
     ClientArenaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CommonComposentModule,
   ]
 })
-export class ClientArenaModule { }
+export class ClientArenaModule {
+}
