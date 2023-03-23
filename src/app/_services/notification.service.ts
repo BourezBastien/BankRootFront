@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {NgToastService} from "ng-angular-popup";
+import {ToastrService} from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -7,36 +7,22 @@ import {NgToastService} from "ng-angular-popup";
 export class NotificationService {
 
 
-  constructor(private notificationService: NgToastService) {
+  constructor(private notificationService: ToastrService) {
   }
 
-  openWarning(details: string, summary: string, duration: number) {
-    this.notificationService.warning({
-      detail: details,
-      summary: summary,
-      duration: duration,
-      position: 'tr'
-    })
+  openWarning(details: string, summary: string) {
+    this.notificationService.warning(summary, details);
   }
 
-  openSuccess(details: string, summary: string, duration: number) {
-    this.notificationService.success({
-      detail: details, summary: summary, duration: duration,
-      position: 'tr'
-    })
+  openSuccess(details: string, summary: string) {
+    this.notificationService.success(summary, details);
   }
 
-  openError(details: string, summary: string, duration: number) {
-    this.notificationService.error({
-      detail: details, summary: summary, duration: duration,
-      position: 'tr'
-    })
+  openError(details: string, summary: string) {
+    this.notificationService.error(summary, details);
   }
 
-  openInfo(details: string, summary: string, duration: number) {
-    this.notificationService.info({
-      detail: details, summary: summary, duration: duration,
-      position: 'tr'
-  })
+  openInfo(details: string, summary: string) {
+    this.notificationService.info(summary, details);
   }
 }

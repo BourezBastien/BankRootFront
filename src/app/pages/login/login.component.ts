@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
       next: (data) => {
         this.storageService.saveUser(data);
         this.router.navigateByUrl('/admin');
-        this.notificationService.openSuccess("Succès", "Vous êtes maintenant connecté", 5000);
+        this.notificationService.openSuccess("Succès", "Vous êtes maintenant connecté");
       },
     });
   }

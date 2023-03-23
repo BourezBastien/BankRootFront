@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
 
   logout(): any {
     this.storageService.clean();
-    this.notifService.openSuccess("Succèes", "Vous avez était déconnecter", 5000);
+    this.notifService.openSuccess("Succèes", "Vous avez était déconnecter");
     return this.router.navigateByUrl('/');
 
   }

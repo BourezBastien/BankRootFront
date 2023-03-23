@@ -1,17 +1,16 @@
 import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {NgToastModule} from 'ng-angular-popup';
 import {httpInterceptorProviders} from "./_helpers";
 import {AdminArenaModule} from "./pages/admin-arena/admin-arena.module";
 import {ClientArenaModule} from "./pages/client-arena/client-arena.module";
 import {HomepageModule} from "./pages/homepage/homepage.module";
 import {LoginModule} from "./pages/login/login.module";
 import {RegistrationModule} from "./pages/registration/registration.module";
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -19,17 +18,23 @@ import {RegistrationModule} from "./pages/registration/registration.module";
     AppComponent,
   ],
   imports: [
-    BrowserModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      progressBar: true,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      closeButton: true,
+    }),
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    NgToastModule,
     AdminArenaModule,
     ClientArenaModule,
     HomepageModule,
     LoginModule,
-    RegistrationModule
+    RegistrationModule,
+    BrowserAnimationsModule,
 
   ],
   providers: [httpInterceptorProviders],

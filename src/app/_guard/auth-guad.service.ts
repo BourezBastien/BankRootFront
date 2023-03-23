@@ -10,7 +10,7 @@ export const canActivate: CanActivateFn = (route: ActivatedRouteSnapshot, state:
 
   if (!auth.getToken()) {
     router.navigateByUrl('/login');
-    notification.openError("Erreur", "Veuillez vous authentifier", 5000)
+    notification.openError("Erreur", "Veuillez vous authentifier")
     return false;
   }
 

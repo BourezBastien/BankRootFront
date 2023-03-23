@@ -13,7 +13,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     return next.handle(request).pipe(catchError((err: any) => {
       if (err.status === 401) {
         this.authentiationService.logout();
-        this.notificationService.openError("Erreur", "Veuillez vérifier vos identifiants et ou permissions !", 5000)
+        this.notificationService.openError("Erreur", "Veuillez vérifier vos identifiants et ou permissions !")
       }
       const error = err.error.message || err.statusText;
       return throwError(error);

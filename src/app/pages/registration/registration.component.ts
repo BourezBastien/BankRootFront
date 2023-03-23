@@ -35,12 +35,12 @@ export class RegistrationComponent {
 
     this.service.createUser(user).subscribe((response) => {
       try {
-        this.notificationService.openSuccess("Succèes", "Votre compte a bien était crée", 5000)
+        this.notificationService.openSuccess("Succèes", "Votre compte a bien était crée")
         this.form.reset();
         this.router.navigateByUrl('/login');
 
       } catch (e) {
-        this.notificationService.openError("Erreur", "Une erreur est survenus lors de la création de votre compte", 5000)
+        this.notificationService.openError("Erreur", "Une erreur est survenus lors de la création de votre compte")
         console.log(e);
 
       }
