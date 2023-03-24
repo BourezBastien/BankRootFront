@@ -1,0 +1,18 @@
+{
+  "/user": {
+    "target": "http://localhost:8080/api",
+    "secure": false
+  },
+  "/auth/register": {
+    "target": "http://localhost:8080/api",
+    "secure": false
+  },
+  "/auth/login": {
+    "target": "http://localhost:8080/api",
+    "secure": false
+  },
+  "/transaction": {
+    "target": "http://localhost:8080/api",
+    "secure": false
+  }
+}
