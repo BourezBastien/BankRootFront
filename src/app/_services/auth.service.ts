@@ -17,7 +17,7 @@ export class AuthService {
   }
 
   login(mail: string, password: string) {
-    return this.http.post("/auth/login", {mail, password}, httpOptions);
+    return this.http.post("auth/login", {mail, password}, httpOptions);
   }
 
   getToken() {

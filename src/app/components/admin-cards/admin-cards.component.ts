@@ -16,25 +16,23 @@ export class AdminCardsComponent implements OnInit {
   constructor(private apiservice: ApiService, private notificationService: NotificationService) {
   }
 
-  OVERDRAFT_LIMIT = 0;
-  WITHDRAWAL_LIMIT = 0;
-  PAYMENT_CEILING = 0;
+  DEPOSIT = 0;
+  WHITHDRAW = 0;
 
   async ngOnInit() {
     const requests = await this.getRequests();
     this.requests = requests;
     if (requests) {
       requests.map((item: any) => {
-          if (item.request_type === "OVERDRAFT_LIMIT") {
-            this.OVERDRAFT_LIMIT++
-          } else if (item.request_type === "WITHDRAWAL_LIMIT") {
-            this.WITHDRAWAL_LIMIT++
-          } else {
-            this.PAYMENT_CEILING++
+          console.log(item);
+          if (item.type === "deposit") {
+            this.DEPOSIT++
+          } else if (item.type === "withdraw") {
+            this.WHITHDRAW++
           }
         }
       )
-      return this.notificationService.openInfo("Demandes", `Vous avez ${this.OVERDRAFT_LIMIT + this.WITHDRAWAL_LIMIT + this.PAYMENT_CEILING} demande(s) en attente`)
+      return this.notificationService.openInfo("Demandes", `Vous avez ${this.DEPOSIT + this.WHITHDRAW} demande(s) en attente`)
     } else {
       return this.notificationService.openInfo("Demandes", "Aucune nouvelles demandes")
     }

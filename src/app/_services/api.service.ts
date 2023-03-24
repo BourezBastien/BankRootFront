@@ -26,6 +26,6 @@ export class ApiService {
   }
 
   getRequests() {
-    return this.http.get("/account-request/all", this.httpOptions);
+    return this.http.get("/transaction", this.httpOptions);
   }
 }
