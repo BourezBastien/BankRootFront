@@ -17,7 +17,7 @@ jobs:
         uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          username: debian
           password: ${{ secrets.SERVER_PASSWORD }}
           source: src/
           target: bankroot
@@ -26,9 +26,9 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SERVER_IP }}
-          username: ${{ secrets.SERVER_USERNAME }}
+          username: debian
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /home/${{ secrets.SERVER_USERNAME }}/bankroot/src/
+            cd /home/debian/bankroot/src/
             docker build -t angular/bankroot:v1 .
             docker-compose up -d
