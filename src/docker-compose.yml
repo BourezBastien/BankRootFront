@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  bankroot:
+    image: uraniumoff/bank-root-front-latest:latest
+    restart: always
+    ports:
+      - 80:80
