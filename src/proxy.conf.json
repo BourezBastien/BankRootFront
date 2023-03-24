@@ -1,18 +1,18 @@
 {
   "/user": {
-    "target": "http://152.228.163.78:3000/",
+    "target": "http://localhost:8080/api",
     "secure": false
   },
   "/auth/register": {
-    "target": "http://152.228.163.78:3000/",
+    "target": "http://localhost:8080/api",
     "secure": false
   },
   "/auth/login": {
-    "target": "http://152.228.163.78:3000/",
+    "target": "http://localhost:8080/api",
     "secure": false
   },
-  "/account-request/all": {
-    "target": "http://152.228.163.78:3000/",
+  "/transaction": {
+    "target": "http://localhost:8080/api",
     "secure": false
   }
 }
