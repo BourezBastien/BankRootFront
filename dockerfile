@@ -24,10 +24,14 @@ FROM nginx:latest
 # Copy the build output to replace the default nginx contents.
 COPY --from=build /app/dist/bank-root-front /usr/share/nginx/html
 
+RUN apt-get update && \
+    apt-get install -y certbot
+
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 
 # Expose port 80
 EXPOSE 80
+EXPOSE 443
 
 CMD ["nginx", "-g", "daemon off;"]
