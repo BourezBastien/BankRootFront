@@ -14,9 +14,6 @@ COPY . .
 # Install all the dependencies
 RUN npm install
 
-# Generate the build of the application
-RUN npx ng build --configuration production
-
 # Stage 2: Serve app with nginx server
 
 # Use official nginx image as the base image
