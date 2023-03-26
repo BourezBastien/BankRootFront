@@ -11,16 +11,10 @@ WORKDIR /app
 # Add the source code to app
 COPY . .
 
-# Install all the dependencies
-RUN ls 
-RUN cd ../app && ls
-RUN pwd
-
-
 RUN npm install
 # Stage 2: Serve app with nginx server
 
-RUN npm run build:prod
+RUN cd src/ && npm run build:prod
 
 # Use official nginx image as the base image
 FROM nginx:latest
