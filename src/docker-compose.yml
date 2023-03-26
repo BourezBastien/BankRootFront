@@ -3,7 +3,7 @@ services:
   bank-root-front:
     build:
       context: app/
-      dockerfile: Dockerfile
+      dockerfile: ./Dockerfile
     ports:
       - "80:80"
       - "443:443"
