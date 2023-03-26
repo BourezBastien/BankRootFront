@@ -13,7 +13,8 @@ COPY . .
 
 # Install all the dependencies
 RUN ls 
-RUN cd bankroot/ && ls
+RUN cd ../
+RUN ls
 
 RUN npm install
 # Stage 2: Serve app with nginx server
@@ -28,6 +29,7 @@ COPY --from=build /app/dist/bank-root-front /usr/share/nginx/html
 RUN apt-get update && \
     apt-get install -y certbot && apt install python3-certbot-nginx -y && apt install wget -y
 
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
 EXPOSE 80
