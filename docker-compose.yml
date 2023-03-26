@@ -2,7 +2,7 @@ version: '3.8'
 services:
   bank-root-front:
     build:
-      context: ./
+      context: ./app
       dockerfile: Dockerfile
     ports:
       - "80:80"
