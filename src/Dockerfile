@@ -30,7 +30,7 @@ RUN apt-get update && \
 
 CMD ["certbot", "certonly", "--agree-tos", "--non-interactive", "--text", "--email", "bourezbastien@gmail.com", "--preferred-challenges", "dns,http", "--nginx", "-d", "bankr00t.com"]
 
-CMD ["cp", "nginx/nginx.conf ", "/etc/nginx/nginx.conf"]
+CMD ["cp", "nginx/nginx.conf", "/etc/nginx/nginx.conf"]
 CMD ["cp", "nginx/nginx_ssl.conf", "/etc/nginx/nginx_ssl.conf"]
 CMD ["rm", "-r", "/etc/nginx/nginx.conf"]
 CMD ["mv", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
