@@ -34,11 +34,16 @@ RUN apt-get update && \
 
 CMD ["certbot", "certonly", "--agree-tos", "--non-interactive", "--text", "--email", "bourezbastien@gmail.com", "--preferred-challenges", "dns,http", "--nginx", "-d", "bankr00t.com"]
 
-CMD ["cp", "nginx/nginx.conf", "/etc/nginx/nginx.conf"]
-CMD ["cp", "nginx/nginx_ssl.conf", "/etc/nginx/nginx_ssl.conf"]
-CMD ["rm", "-r", "/etc/nginx/nginx.conf"]
-CMD ["mv", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
-CMD ["service", "nginx", "restart"]
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
+
+COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
+
+RUN cd /etc/nginx/ && ls
+
+RUN rm -r /etc/nginx/nginx.conf
+RUN mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
+
+RUN service nginx restart
 
 # Expose port 80
 EXPOSE 80
