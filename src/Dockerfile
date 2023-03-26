@@ -9,11 +9,9 @@ RUN npm install -g http-server
 WORKDIR /app
 
 # Add the source code to app
-COPY ../ .
-
+COPY . .
 
 RUN ls
-RUN pwd
 
 # Install all the dependencies
 
