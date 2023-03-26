@@ -32,15 +32,6 @@ CMD ["certbot", "certonly", "--agree-tos", "--non-interactive", "--text", "--ema
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
-
-RUN cd /etc/nginx/ && ls
-
-RUN rm -r /etc/nginx/nginx.conf
-RUN mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
-
-RUN service nginx restart
-
 # Expose port 80
 EXPOSE 80
 EXPOSE 443
