@@ -34,7 +34,8 @@ COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
 
-RUN rm -r /etc/nginx/nginx.conf && mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
+RUN rm -r /etc/nginx/nginx.conf
+RUN mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
 
 RUN service nginx restart
 
