@@ -32,18 +32,6 @@ COPY --from=build /app/dist/bank-root-front /usr/share/nginx/html
 RUN apt-get update && \
     apt-get install -y certbot && apt install python3-certbot-nginx -y && apt install wget -y
 
-CMD ["certbot", "certonly", "--agree-tos", "--non-interactive", "--text", "--email", "bourezbastien@gmail.com", "--preferred-challenges", "dns,http", "--nginx", "-d", "bankr00t.com"]
-
-RUN rm -r /etc/nginx/nginx.conf
-
-COPY nginx/nginx.conf /etc/nginx/nginx.conf
-
-COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
-
-RUN mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
-
-RUN service nginx restart
-
 # Expose port 80
 EXPOSE 80
 EXPOSE 443
