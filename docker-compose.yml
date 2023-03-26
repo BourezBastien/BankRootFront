@@ -1,10 +1,9 @@
 version: '3.8'
 services:
   bank-root-front:
-    build: .
-  bankroot:
-    image: uraniumoff/bank-root-front-latest:1.0
-    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
     ports:
-      - 80:80
-      - 443:443
+      - "80:80"
+      - "443:443"
