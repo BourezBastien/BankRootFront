@@ -26,7 +26,7 @@ RUN apt-get update && \
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-RUN certbot --nginx && \ echo "bourezbastien@gmail.com" && \ echo "y" && \ echo "n" && \ echo "1"
+RUN certbot --non-interactive --agree-tos --email "bourezbastien@gmail.com" --nginx -d "bankr00t.com"
 
 COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
 
