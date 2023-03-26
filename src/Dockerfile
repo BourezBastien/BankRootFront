@@ -34,14 +34,12 @@ RUN apt-get update && \
 
 CMD ["certbot", "certonly", "--agree-tos", "--non-interactive", "--text", "--email", "bourezbastien@gmail.com", "--preferred-challenges", "dns,http", "--nginx", "-d", "bankr00t.com"]
 
-RUN rm -r /etc/nginx/nginx.conf
-
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
 
 RUN rm -r /etc/nginx/nginx.conf
-CMD ["cp", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
+CMD ["mv", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
 
 RUN service nginx restart
 
