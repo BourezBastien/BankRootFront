@@ -6,7 +6,7 @@ FROM node:lts as build
 RUN npm install -g http-server
 
 # Set the working directory
-WORKDIR .
+WORKDIR /app
 
 # Add the source code to app
 COPY . .

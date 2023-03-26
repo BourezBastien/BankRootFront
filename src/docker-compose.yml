@@ -2,7 +2,7 @@ version: '3.3'
 services:
   bank-root-front:
     build:
-      context: .
+      context: /home/debian/bankroot/src/
       dockerfile: /home/debian/bankroot/src/Dockerfile
     ports:
       - "80:80"
