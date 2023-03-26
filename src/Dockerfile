@@ -15,6 +15,8 @@ RUN ls
 
 # Install all the dependencies
 
+RUN npm install @angular/cli
+
 RUN npm run build:prod
 
 RUN npm install
