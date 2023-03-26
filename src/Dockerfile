@@ -16,7 +16,7 @@ RUN ls
 # Install all the dependencies
 RUN npm install
 
-RUN npm build:prod
+RUN npm run build:prod
 # Stage 2: Serve app with nginx server
 
 # Use official nginx image as the base image
