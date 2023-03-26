@@ -11,6 +11,8 @@ WORKDIR /app
 # Add the source code to app
 COPY . .
 
+RUN ls
+
 # Install all the dependencies
 RUN npm install
 
