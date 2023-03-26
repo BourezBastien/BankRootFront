@@ -22,10 +22,17 @@ FROM nginx:latest
 COPY --from=build /app/dist/bank-root-front /usr/share/nginx/html
 
 RUN apt-get update && \
-    apt-get install -y certbot
+    apt-get install -y certbot && apt install python3-certbot-nginx -y && apt install wget -y
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
+RUN certbot --nginx && \ echo "bourezbastien@gmail.com" && \ echo "y" && \ echo "n" && \ echo "1"
+
+COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
+
+RUN rm -r /etc/nginx/nginx.conf && mv /etc/nginx/nginx_ssl.conf /etc/nginx/nginx.conf
+
+RUN service nginx restart
 
 # Expose port 80
 EXPOSE 80
