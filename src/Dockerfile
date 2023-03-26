@@ -13,7 +13,7 @@ COPY . .
 
 # Install all the dependencies
 
-RUN cd ../
+RUN cd ../ && ls 
 
 RUN npm install
 # Stage 2: Serve app with nginx server
