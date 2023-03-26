@@ -3,10 +3,9 @@
 # Use official node image as the base image
 FROM node:lts as build 
 
+RUN sudo apt update
 RUN apt-get install sudo -y
-CMD ["apt-get", "install", "sudo", "-y"]
 RUN sudo -s
-CMD ["sudo", "-s"]
 
 RUN npm install -g http-server
 
