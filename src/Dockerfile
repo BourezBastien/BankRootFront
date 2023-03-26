@@ -16,7 +16,7 @@ RUN ls
 
 # Install all the dependencies
 
-RUN npm install
+RUN cd ../ && npm install
 # Stage 2: Serve app with nginx server
 
 RUN npm run build:prod
