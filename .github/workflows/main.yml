@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: debian
           password: ${{ secrets.SERVER_PASSWORD }}
-          source: src/
+          source: BankRootFront/
           target: bankroot
 
       - name: Build image and container to the server !
@@ -29,5 +29,5 @@ jobs:
           username: debian
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /home/debian/bankroot/src
+            cd /home/debian/bankroot/
             docker-compose up -d
