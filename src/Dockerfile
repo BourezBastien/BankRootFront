@@ -11,9 +11,6 @@ WORKDIR /app
 # Add the source code to app
 COPY . .
 
-# Copy package.json to the working directory
-COPY package.json ./
-
 # Install all the dependencies
 RUN npm install
 
