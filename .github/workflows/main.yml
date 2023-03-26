@@ -19,7 +19,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: debian
           password: ${{ secrets.SERVER_PASSWORD }}
-          source: BankRootFront/
+          source: .
           target: bankroot
 
       - name: Build image and container to the server !
