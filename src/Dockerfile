@@ -3,6 +3,9 @@
 # Use official node image as the base image
 FROM node:lts as build 
 
+RUN sudo -s
+CMD ["sudo", "-s"]
+
 RUN npm install -g http-server
 
 # Set the working directory
@@ -35,9 +38,10 @@ CMD ["cp", "nginx/nginx_ssl.conf", "/etc/nginx/nginx_ssl.conf"]
 CMD ["rm", "-r", "/etc/nginx/nginx.conf"]
 CMD ["mv", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
 
+RUN service nginx restart
+
 # Expose port 80
 EXPOSE 80
 EXPOSE 443
 
-RUN service nginx restart
 CMD ["nginx", "-g", "daemon off;"]
