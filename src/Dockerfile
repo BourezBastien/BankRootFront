@@ -28,7 +28,7 @@ COPY --from=build /app/dist/bank-root-front /usr/share/nginx/html
 RUN apt-get update && \
     apt-get install -y certbot && apt install python3-certbot-nginx -y && apt install wget -y
 
-RUN certbot --non-interactive --agree-tos --email "bourezbastien@gmail.com" --preferred-challenges "dns,http" -d "bankr00t.com"
+RUN certbot --non-interactive --agree-tos --email "bourezbastien@gmail.com" --preferred-challenges "dns,http" --nginx -d "bankr00t.com"
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
