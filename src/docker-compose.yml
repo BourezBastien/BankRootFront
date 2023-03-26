@@ -1,5 +1,7 @@
 version: '3.3'
 services:
+  app:
+    build: .
   bankroot:
     image: uraniumoff/bank-root-front-latest:1.0
     restart: always
