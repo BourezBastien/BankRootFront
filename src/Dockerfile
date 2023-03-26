@@ -40,7 +40,8 @@ COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
 COPY nginx/nginx_ssl.conf /etc/nginx/nginx_ssl.conf
 
-CMD ["mv", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
+RUN rm -r /etc/nginx/nginx.conf
+CMD ["cp", "/etc/nginx/nginx_ssl.conf", "/etc/nginx/nginx.conf"]
 
 RUN service nginx restart
 
