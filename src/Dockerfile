@@ -13,7 +13,7 @@ COPY . .
 
 # Install all the dependencies
 RUN ls 
-RUN cd ../ && ls
+RUN cd ../app && ls
 RUN pwd
 
 
