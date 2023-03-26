@@ -1,6 +1,6 @@
-version: '3.3'
+version: '3.8'
 services:
-  app:
+  bank-root-front:
     build: .
   bankroot:
     image: uraniumoff/bank-root-front-latest:1.0
