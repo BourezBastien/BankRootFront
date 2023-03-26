@@ -2,8 +2,8 @@ version: "3.3"
 services:
   app:
     build:
-      context: /home/debian/bankroot/
-      dockerfile: src/Dockerfile
+      context: /home/debian/bankroot/src
+      dockerfile: Dockerfile
     ports:
       - "80:80"
       - "443:443"
