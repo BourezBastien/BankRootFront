@@ -8,7 +8,7 @@
 }
 
 @mixin for-tablet-portrait-up {
-  @media (min-width: 600px) {
+  @media (max-width: 750px) {
     @content;
   }
 }

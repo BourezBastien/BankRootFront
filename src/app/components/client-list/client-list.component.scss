@@ -1,4 +1,6 @@
 @import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
+
 
 .table-container {
   display: flex;
@@ -34,7 +36,8 @@
       }
     }
 
-    @media only screen and (max-width: 600px) {
+    @include for-phone-only {
+
       th,
       td {
         display: block;

@@ -1,4 +1,5 @@
 @import "../../../styles/abstracts/variables";
+@import "../../../styles/abstracts/mixins";
 
 
 .admin-cards {
@@ -58,3 +59,36 @@
 }
 
 
+@include for-phone-only {
+  .admin-cards {
+    width: 100vw;
+    gap: 20px;
+
+    .item {
+      width: 100vw;
+      height: 230px;
+      display: flex;
+      flex-direction: column;
+      background-color: $primary;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+}
+
+@include for-tablet-portrait-up {
+  .admin-cards {
+    width: 100vw;
+    gap: 20px;
+
+    .item {
+      width: 100vw;
+      height: 230px;
+      display: flex;
+      flex-direction: column;
+      background-color: $primary;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+}
