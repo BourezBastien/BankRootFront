@@ -1,36 +1,36 @@
 <section class="admin-cards">
 
-  <a href="#">
+  <a (click)="openModal('withdraw')">
     <div class="item">
       <div class="top">
         <i class="ri-bank-card-line"></i>
-        <a href="#"><i class="ri-arrow-right-line"></i></a>
+        <a (click)="openModal('deposit')"><i class="ri-arrow-right-line"></i></a>
       </div>
       <div class="bottom">
-        <h2>{{ DEPOSIT }}</h2>
+        <h2>{{ WITHDRAW }}</h2>
         <p>Retrait(s) en attente</p>
       </div>
     </div>
   </a>
 
-  <a href="#">
+  <a (click)="openModal('deposit')">
     <div class="item">
       <div class="top">
         <i class="ri-luggage-deposit-line"></i>
-        <a href="#"><i class="ri-arrow-right-line"></i></a>
+        <a (click)="openModal('deposit')"><i class="ri-arrow-right-line"></i></a>
       </div>
       <div class="bottom">
-        <h2>{{ WHITHDRAW }}</h2>
+        <h2>{{ DEPOSIT }}</h2>
         <p>Dépot(s) en attente</p>
       </div>
     </div>
   </a>
 
-  <a href="#">
+  <a (click)="openModal()">
     <div class="item">
       <div class="top">
         <i class="ri-user-follow-line"></i>
-        <a href="#"><i class="ri-arrow-right-line"></i></a>
+        <a (click)="openModal('deposit')"><i class="ri-arrow-right-line"></i></a>
       </div>
       <div class="bottom">
         <h2>1</h2>
@@ -39,11 +39,11 @@
     </div>
   </a>
 
-  <a href="#">
+  <a (click)="openModal()">
     <div class="item">
       <div class="top">
         <i class="ri-user-unfollow-line"></i>
-        <a href="#"><i class="ri-arrow-right-line"></i></a>
+        <a (click)="openModal('deposit')"><i class="ri-arrow-right-line"></i></a>
       </div>
       <div class="bottom">
         <h2>2</h2>
@@ -51,4 +51,33 @@
       </div>
     </div>
   </a>
+
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span (click)="closeModal()" class="close">&times;</span>
+      <div class="table-container">
+        <table>
+          <thead>
+          <tr>
+            <th>Identifiant client</th>
+            <th>Identifiant compte</th>
+            <th>Type de la demande</th>
+            <th>Date de création</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of requests">
+            <td>{{ item.id_user }}</td>
+            <td>{{ item.id_bank_account }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.created_at | date:' hh:mm a - dd/MM/yyyy'}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </section>

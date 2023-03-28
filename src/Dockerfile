@@ -26,8 +26,6 @@ RUN apt-get update && \
 
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 
-CMD ["certbot", "run", "-n", "--nginx", "--agree-tos", "-d", "bankr00t.com", "-m", "bourezbastien@gmail.com", "--redirect"]
-
 # Expose port 80
 EXPOSE 80
 EXPOSE 443

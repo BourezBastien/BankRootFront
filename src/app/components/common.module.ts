@@ -9,6 +9,7 @@ import {ClientCradsRequestsComponent} from './client-crads-requests/client-crads
 @NgModule({
   imports: [HeaderComponent, FooterComponent, ClientListComponent, AdminCardsComponent, ClientBankAccountComponent, ClientCradsRequestsComponent],
   exports: [HeaderComponent, FooterComponent, ClientListComponent, AdminCardsComponent, ClientBankAccountComponent, ClientCradsRequestsComponent],
+  declarations: [],
 })
 export class CommonComposentModule {
 }

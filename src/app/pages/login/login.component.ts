@@ -32,8 +32,8 @@ export class LoginComponent implements OnInit {
   async onSubmitLogin() {
 
     const {email, password} = this.form.value;
-
-    this.authService.login(email || "", password || "").subscribe({
+    if (!email || !password) return this.notificationService.openError("Erreur", "Veuillez remplir tous les champs !");
+    this.authService.login(email, password).subscribe({
       next: (data) => {
         this.storageService.saveUser(data);
         this.router.navigateByUrl('/admin');
