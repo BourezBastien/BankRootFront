@@ -30,17 +30,17 @@ Le catalogue de l'API est disponible à cetta adresse : http://152.228.163.78:30
 
 ## Modalités d'évaluation
 
-- Un repo Github correctement agencé (Gitflow, Angular style, Commits correctement répartis, etc …)
-- Des commits clairs et détaillés
-- Un readme clair, complet et agréable à la rétine
-- Un Jira reprenant toutes les différentes étapes du projet (créé par le Product Owner)
-- Les schémas de conception : Wireframe, Mockup
+- Un repo Github correctement agencé (Gitflow, Angular style, Commits correctement répartis, etc …).
+- Des commits clairs et détaillés.
+- Un readme clair, complet et agréable à la rétine.
+- Un Jira reprenant toutes les différentes étapes du projet (créé par le Product Owner).
+- Les schémas de conception : Wireframe, Mockup.
 
 ## Livrables
 
-- Un repo Github complet
-- Les shémas de conception : wireframe et Mockup
-- Une interface déployée sur un VPS et accessible depuis n'importe quel navigateur
+- Un repo Github complet.
+- Les shémas de conception : wireframe et Mockup.
+- Une interface déployée sur un VPS et accessible depuis n'importe quel navigateur.
 
 ## Sources:
 
